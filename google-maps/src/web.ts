@@ -313,12 +313,10 @@ export class CapacitorGoogleMapsWeb
     });
 
     // Draw Tiles
-    map.overlayMapTypes.push(coordMapType); // insert coordMapType at the first position
-    console.log('tileoverlay 1');
+    map.overlayMapTypes.insertAt(0, coordMapType); // insert coordMapType at the first position
 
     // Add the TileOverlay to the map
     map.overlayMapTypes.push(customMapOverlay);
-    console.log('tileoverlay 2');
 
     // Optionally, you can set debug mode if needed
     if (_args?.debug) {
